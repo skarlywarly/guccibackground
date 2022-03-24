@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import fileSaver from "file-saver";
 
 const GUCCI_ADDRESS = "0x572e33ffa523865791ab1c26b42a86ac244df784";
 
@@ -50,6 +51,16 @@ const App = () => {
     }
   }, [id]);
 
+  const onButtonClick = async () => {
+    const canvas = document.getElementById("canvas");
+    // @ts-ignore
+    const dataUrl = canvas.toDataURL("image/png");
+
+    const animalName = "guccified";
+
+    fileSaver.saveAs(dataUrl, animalName);
+  };
+
   return (
     <div className="flex flex-col items-center w-full h-full">
       <div className="flex flex-col items-center max-w-screen-sm">
@@ -79,9 +90,7 @@ const App = () => {
         >
           Generate Preview
         </div>
-        <div className="px-4 py-2 mt-4 text-lg font-bold border-2" onClick={() => {
-        alert('Just right-click-save mfer')
-        }}>Download</div>
+        <div className="px-4 py-2 mt-4 text-lg font-bold border-2" onClick={onButtonClick}>Download</div>
       </div>
     </div>
   );
