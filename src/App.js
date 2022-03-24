@@ -13,7 +13,7 @@ const App = () => {
     const context = canvas.getContext("2d");
     context.clearRect(0, 0, 350, 350);
 
-    context.fillStyle = '#000000000';
+    context.fillStyle = "#000000000";
     context.fillRect(0, 0, 350, 350);
   }, []);
 
@@ -27,7 +27,7 @@ const App = () => {
 
     context.clearRect(0, 0, 350, 350);
 
-    const fillColor = `#${bg.replace('#', '')}`;
+    const fillColor = `#${bg.replace("#", "")}`;
     context.fillStyle = fillColor;
     context.fillRect(0, 0, 350, 350);
 
@@ -64,7 +64,14 @@ const App = () => {
   return (
     <div className="flex flex-col items-center w-full h-full">
       <div className="flex flex-col items-center max-w-screen-sm">
-        <div className="mt-4 text-3xl font-bold">GUCCIFIED</div>
+        <div
+          className="mt-4 text-3xl font-bold"
+          style={{
+            fontFamily: "Granjon",
+          }}
+        >
+          GUCCIFIED
+        </div>
         <input
           placeholder="Enter 10ktf x gucci Token Id"
           name="id"
@@ -87,10 +94,21 @@ const App = () => {
         <div
           onClick={generatePreview}
           className="px-4 py-2 mt-2 text-lg font-bold border-2"
+          style={{
+            fontFamily: "Granjon",
+          }}
         >
-          Generate Preview
+          GENERATE PREVIEW
         </div>
-        <div className="px-4 py-2 mt-4 text-lg font-bold border-2" onClick={onButtonClick}>Download</div>
+        <div
+          className="px-4 py-2 mt-4 text-lg font-bold border-2"
+          onClick={onButtonClick}
+          style={{
+            fontFamily: "Granjon",
+          }}
+        >
+          DOWNLOAD
+        </div>
       </div>
     </div>
   );

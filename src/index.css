@@ -16,3 +16,9 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Granjon';
+  src: local('Granjon'), url('./Granjon.otf') format('opentype')
+}
+
