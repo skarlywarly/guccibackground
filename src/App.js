@@ -5,7 +5,7 @@ const GUCCI_ADDRESS = "0x572e33ffa523865791ab1c26b42a86ac244df784";
 const App = () => {
   const [id, setId] = useState("");
   const [data, setData] = useState(null);
-  const [bg, setBg] = useState("00ff00");
+  const [bg, setBg] = useState("0000ff");
 
   useEffect(() => {
     const canvas = document.getElementById("canvas");
@@ -55,7 +55,7 @@ const App = () => {
       <div className="flex flex-col items-center max-w-screen-sm">
         <div className="mt-4 text-3xl font-bold">GUCCIFIED</div>
         <input
-          placeholder="Enter Token Id"
+          placeholder="Enter 10ktf x gucci Token Id"
           name="id"
           value={id}
           onChange={({ target: { value } }) => {
